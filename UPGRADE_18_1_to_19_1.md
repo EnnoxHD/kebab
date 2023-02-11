@@ -1,27 +1,20 @@
-# kebab
-OnePlus 8T (KB2003)
+# Upgrade LineageOS for microG (18.1 to 19.1)
+[New Upgrades](README.md)
 
-- https://wiki.lineageos.org/devices/kebab/
+## Prerequisites
 
-## Previous Upgrades
-- [Upgrade LineageOS for microG (18.1 to 19.1)](UPGRADE_18_1_to_19_1.md)
-
-## Upgrade LineageOS for microG (18.1 to 19.1)
-
-### Prerequisites
-
-#### Resources
+### Resources
 1. [OxygenOS firmware image `KB2003_11_C.33`](https://forum.xda-developers.com/t/rom-official-kebab-12-lineageos-19.4484387/page-2#post-87339725)
 1. [Additional firmware partition images `dtbo.img` and `vbmeta.img`](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions), [Download](https://mirror.math.princeton.edu/pub/lineageos/full/kebab/)
 1. [LineageOS for microG 19.1](https://download.lineage.microg.org/kebab/)
     - Recovery image file
     - OS zip file
 
-#### Software
+### Software
 1. [OTA payload dumper](https://github.com/ssut/payload-dumper-go), [Archlinux: AUR package `payload-dumper-go-bin`](https://aur.archlinux.org/packages/payload-dumper-go-bin)
 1. [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools#downloads), [Archlinux: Community package `android-tools`](https://archlinux.org/packages/community/x86_64/android-tools/])
 
-### Guide
+## Guide
 1. Extract firmware images
     1. Unzip the `payload.bin` file out of the OxygenOS firmware image zip
     1. Dump the partition images: `payload-dumper-go -o . payload.bin`
@@ -54,9 +47,9 @@ OnePlus 8T (KB2003)
     1. Check self test in microG settings
     1. Optional: Reboot to recovery and redo the steps from `Update OS` to also update the second slot
 
-### Appendix
+## Appendix
 
-#### Appendix A
+### Appendix A
 Source: [Update firmware on kebab: 7.](https://wiki.lineageos.org/devices/kebab/fw_update)
 
 ```
@@ -82,7 +75,7 @@ fastboot flash --slot=all tz tz.img
 fastboot flash --slot=all uefisecapp uefisecapp.img
 ```
 
-#### Appendix B
+### Appendix B
 Source: [Update firmware on kebab: 8.](https://wiki.lineageos.org/devices/kebab/fw_update)
 
 > WARNING: Use the correct files for your DDR type!
@@ -99,7 +92,7 @@ fastboot flash --slot=all xbl_config xbl_config_lp5.img
 fastboot flash --slot=all xbl xbl_lp5.img
 ```
 
-#### Appendix C
+### Appendix C
 Source: [Install LineageOS on kebab: Flashing additional partitions](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions)
 
 ```
