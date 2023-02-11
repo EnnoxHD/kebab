@@ -12,7 +12,7 @@
 
 ### Software
 1. [OTA payload dumper](https://github.com/ssut/payload-dumper-go), [Archlinux: AUR package `payload-dumper-go-bin`](https://aur.archlinux.org/packages/payload-dumper-go-bin)
-1. [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools#downloads), [Archlinux: Community package `android-tools`](https://archlinux.org/packages/community/x86_64/android-tools/])
+1. [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools#downloads), [Archlinux: Community package `android-tools`](https://archlinux.org/packages/community/x86_64/android-tools/)
 
 ## Guide
 1. Extract firmware images
