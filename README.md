@@ -31,9 +31,9 @@ Previous upgrades
 1. Update firmware
     1. Reboot to recovery: `adb reboot recovery`
     1. Enable: `Advanced -> Enable ADB`
-    1. Check for DDR type: `adb shell getprop ro.boot.ddr_type`
-        1. Output `0`: DDR4 (use `xbl_config.img` and `xbl.img`)
-        1. Output `1`: DDR5 (use `xbl_config_lp5.img` and `xbl_lp5.img`)
+    1. Check for DDR type: `adb shell cat /proc/devinfo/ddr_type`
+        1. Output `Device version: DDR4` (use `xbl_config.img` and `xbl.img`)
+        1. Output `Device version: DDR5` (use `xbl_config_lp5.img` and `xbl_lp5.img`)
     1. Enter fastboot: `adb reboot fastboot`
         1. Check connection: `fastboot devices`
     1. Update firmware
@@ -87,13 +87,13 @@ Source: [Update firmware on kebab: 8.](https://wiki.lineageos.org/devices/kebab/
 
 > WARNING: Use the correct files for your DDR type!
 
-For type `0` (DDR4):
+For type `DDR4`:
 ```
 fastboot flash --slot=all xbl_config xbl_config.img
 fastboot flash --slot=all xbl xbl.img
 ```
 
-For type `1` (DDR5):
+For type `DDR5`:
 ```
 fastboot flash --slot=all xbl_config xbl_config_lp5.img
 fastboot flash --slot=all xbl xbl_lp5.img
