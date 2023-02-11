@@ -11,7 +11,7 @@ Previous upgrades
 ### Prerequisites
 
 #### Resources
-1. [OxygenOS firmware image `KB2003_11_F.13`](https://forum.xda-developers.com/t/rom-official-kebab-13-lineageos-20.4536037/post-87928495)
+1. [OxygenOS firmware image `KB2003_11_F.15`](https://forum.xda-developers.com/t/rom-official-kebab-13-lineageos-20.4536037/post-88022207)
 1. [Additional firmware partition images `dtbo.img` and `vbmeta.img`](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions), [Download](https://mirror.math.princeton.edu/pub/lineageos/full/kebab/)
 1. [LineageOS for microG 20.0](https://download.lineage.microg.org/kebab/)
     - Recovery image file
