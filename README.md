@@ -6,14 +6,14 @@ OnePlus 8T (KB2003)
 ## Previous Upgrades
 - [Upgrade LineageOS for microG (18.1 to 19.1)](UPGRADE_18_1_to_19_1.md)
 
-## Upgrade LineageOS for microG (18.1 to 19.1)
+## Upgrade LineageOS for microG (19.1 to 20.0)
 
 ### Prerequisites
 
 #### Resources
-1. [OxygenOS firmware image `KB2003_11_C.33`](https://forum.xda-developers.com/t/rom-official-kebab-12-lineageos-19.4484387/page-2#post-87339725)
+1. [OxygenOS firmware image `KB2003_11_F.13`](https://forum.xda-developers.com/t/rom-official-kebab-13-lineageos-20.4536037/post-87928495)
 1. [Additional firmware partition images `dtbo.img` and `vbmeta.img`](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions), [Download](https://mirror.math.princeton.edu/pub/lineageos/full/kebab/)
-1. [LineageOS for microG 19.1](https://download.lineage.microg.org/kebab/)
+1. [LineageOS for microG 20.0](https://download.lineage.microg.org/kebab/)
     - Recovery image file
     - OS zip file
 
