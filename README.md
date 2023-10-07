@@ -11,7 +11,7 @@ Previous upgrades
 ### Prerequisites
 
 #### Resources
-1. [OxygenOS firmware image `KB2003_13.1.0.580(EX01)`](https://forum.xda-developers.com/t/oneplus-8t-rom-ota-oxygen-os-repo-of-oxygen-os-builds.4193183/#post-83971385)
+1. [OxygenOS firmware image `KB2003_13.1.0.581(EX01): KB2003_11.F.68_2680_202308092236`](https://forum.xda-developers.com/t/oneplus-8t-rom-ota-oxygen-os-repo-of-oxygen-os-builds.4193183/#post-83971385)
 1. [Additional firmware partition images `dtbo.img` and `vbmeta.img`](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions), [Download](https://download.lineageos.org/devices/kebab/builds)
 1. [LineageOS for microG 20.0](https://download.lineage.microg.org/kebab/)
     - Recovery image file
@@ -24,7 +24,7 @@ Previous upgrades
 ### Guide
 1. Extract firmware images
     1. Unzip the `payload.bin` file out of the OxygenOS firmware image zip
-    1. Dump the partition images: `payload-dumper-go -o . payload.bin`
+    1. Dump the partition images: `payload-dumper-go -o . payload.bin` (Caution: This may overwrite existing files like `dtbo.img` and `vbmeta.img`!)
 1. Enable USB Debugging
     1. Enable: `System -> Settings -> Developer options -> Debugging -> USB-Debugging`
     1. Check connection: `adb devices`
