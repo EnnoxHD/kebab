@@ -16,7 +16,7 @@ OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
 1. [OTA payload dumper](https://github.com/ssut/payload-dumper-go), [Archlinux: AUR package `payload-dumper-go-bin`](https://aur.archlinux.org/packages/payload-dumper-go-bin)
 1. [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools#downloads), [Archlinux: Community package `android-tools`](https://archlinux.org/packages/community/x86_64/android-tools/)
 
-### Guide
+### Full upgrade guide 
 1. Extract firmware images
     1. Unzip the `payload.bin` file out of the OxygenOS firmware image zip
     1. Dump the partition images: `payload-dumper-go -o . payload.bin` (Caution: This may overwrite existing files like `dtbo.img` and `vbmeta.img`!)
@@ -48,6 +48,17 @@ OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
     1. Check user data
     1. Check self test in microG settings
     1. Optional: Reboot to recovery and redo the steps from `Update OS` to also update the second slot
+
+### Continuous firmware upgrade guide (after the full upgrade)
+1. Download newer OxygenOS firmware from the link in [Resources](#resources)
+1. Download the latest additional firmware partitions images from the link in [Resources](#resources)
+1. Follow the [Full upgrade guide](#full-upgrade-guide) for these steps
+    1. Extract firmware images
+    1. Enable USB Debugging (only relevant if disabled)
+    1. Update firmware (Tip: For a possible error situation, remember the current slot shown in recovery mode beforehand!)
+1. Reboot: `fastboot reboot bootloader`
+1. Start recovery
+1. Start: `Reboot System now`
 
 ### Appendix
 
