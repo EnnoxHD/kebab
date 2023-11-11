@@ -1,10 +1,5 @@
 # kebab
-OnePlus 8T (KB2003)
-
-- https://wiki.lineageos.org/devices/kebab/
-
-Previous upgrades
-- [Upgrade LineageOS for microG (18.1 to 19.1)](UPGRADE_18_1_to_19_1.md)
+OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
 
 ## Upgrade LineageOS for microG (19.1 to 20.0)
 
