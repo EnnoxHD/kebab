@@ -51,7 +51,7 @@ OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
 
 ### Continuous firmware upgrade guide (after the full upgrade)
 1. Download newer OxygenOS firmware from the link in [Resources](#resources)
-1. Download the latest additional firmware partitions image from the link in [Resources](#resources)
+1. Download the latest additional firmware partition images from the link in [Resources](#resources)
 1. Follow the [Full upgrade guide](#full-upgrade-guide) for these steps
     1. Extract firmware images
     1. Enable USB Debugging (only relevant if disabled)
