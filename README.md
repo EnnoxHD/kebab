@@ -6,7 +6,7 @@ OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
 ### Prerequisites
 
 #### Resources
-1. [OxygenOS firmware image `KB2003_13.1.0.582(EX01): KB2003_11.F.69_2690_202310171042`](https://xdaforums.com/t/oneplus-8t-rom-ota-oxygen-os-repo-of-oxygen-os-builds.4193183/#post-83971385)
+1. [OxygenOS firmware image `KB2003_13.1.0.583(EX01): KB2003_11.F.70_2700_202312042154`](https://xdaforums.com/t/oneplus-8t-rom-ota-oxygen-os-repo-of-oxygen-os-builds.4193183/#post-83971385)
 1. [Additional firmware partition images `dtbo.img` and `vbmeta.img`](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions), [Download](https://download.lineage.microg.org/kebab/)
 1. [LineageOS for microG 20.0](https://download.lineage.microg.org/kebab/)
     - Recovery image file
