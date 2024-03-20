@@ -1,22 +1,24 @@
 # kebab
 OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
 
-## Upgrade LineageOS for microG (19.1 to 20.0)
+## Upgrade LineageOS for microG (20.0 to 21.0)
 
 ### Prerequisites
+
+#### Software
+1. [OTA payload dumper](https://github.com/ssut/payload-dumper-go), [Archlinux: AUR package `payload-dumper-go-bin`](https://aur.archlinux.org/packages/payload-dumper-go-bin)
+1. [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools#downloads), [Archlinux: Extra package `android-tools`](https://archlinux.org/packages/extra/x86_64/android-tools/)
+1. [GNU coreutils](https://www.gnu.org/software/coreutils/), [Archlinux: Core package `coreutils`](https://archlinux.org/packages/core/x86_64/coreutils/)
 
 #### Resources
 1. [OxygenOS firmware image `KB2003_13.1.0.583(EX01): KB2003_11.F.70_2700_202312042154`](https://xdaforums.com/t/oneplus-8t-rom-ota-oxygen-os-repo-of-oxygen-os-builds.4193183/#post-83971385)
 1. [Additional firmware partition images `dtbo.img` and `vbmeta.img`](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions), [Download](https://download.lineage.microg.org/kebab/)
-1. [LineageOS for microG 20.0](https://download.lineage.microg.org/kebab/)
+1. [LineageOS for microG 21.0](https://download.lineage.microg.org/kebab/)
     - Recovery image file
     - OS zip file
+1. Check all downloads with `sha256sum` or `md5sum` and compare them to the ones online
 
-#### Software
-1. [OTA payload dumper](https://github.com/ssut/payload-dumper-go), [Archlinux: AUR package `payload-dumper-go-bin`](https://aur.archlinux.org/packages/payload-dumper-go-bin)
-1. [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools#downloads), [Archlinux: Community package `android-tools`](https://archlinux.org/packages/community/x86_64/android-tools/)
-
-### Full upgrade guide 
+### Full upgrade guide
 1. Extract firmware images
     1. Unzip the `payload.bin` file out of the OxygenOS firmware image zip
     1. Dump the partition images: `payload-dumper-go -o . payload.bin` (Caution: This may overwrite existing files like `dtbo.img` and `vbmeta.img`!)
@@ -32,22 +34,25 @@ OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
     1. Enter fastboot: `adb reboot fastboot`
         1. Check connection: `fastboot devices`
     1. Update firmware
+        1. If the [latest required firmware](https://wiki.lineageos.org/devices/kebab/install/) is already installed this is optional only for vendor firmware. <br/>
+           **Do continue with the required additional partitions!**
         1. Update firmware, part 1: [Appendix A](#appendix-a)
         1. Update firmware, part 2: [Appendix B](#appendix-b) (WARNING: Use the correct files for your DDR type!)
-        1. Update additional partitions: [Appendix C](#appendix-c)
+        1. Update additional partitions: [Appendix C](#appendix-c) **(This is always required!)**
 1. Update Recovery
-    1. Flash LineageOS recovery image: `fastboot flash --slot=all recovery <los_recovery>.img`
+    1. Flash LineageOS recovery image: `fastboot flash --slot=all recovery lineage-21.0-xxxxxxxx-microG-kebab-recovery.img`
     1. Reboot: `fastboot reboot bootloader`
 1. Update OS
     1. Start recovery
     1. Enable: `Advanced -> Enable ADB`
     1. Initiate sideloading: `Apply Update -> Apply from ADB`
-    1. Sideload: `adb sideload <los>.zip`
+    1. Sideload: `adb sideload lineage-21.0-xxxxxxxx-microG-kebab.zip`
+    1. Prompt: `To install additional packages... Do you want to reboot recovery now? -> NO`
     1. Start: `Reboot System now`
 1. First start of the new OS
     1. Check user data
     1. Check self test in microG settings
-    1. Optional: Reboot to recovery and redo the steps from `Update OS` to also update the second slot
+    1. Reboot to recovery and redo the steps from `Update OS` to also update the second slot
 
 ### Continuous firmware upgrade guide (after the full upgrade)
 1. Download newer OxygenOS firmware from the link in [Resources](#resources)
@@ -109,6 +114,6 @@ fastboot flash --slot=all xbl xbl_lp5.img
 Source: [Install LineageOS on kebab: Flashing additional partitions](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions)
 
 ```
-fastboot flash --slot=all dtbo lineage-20.0-xxxxxxxx-microG-kebab-dtbo.img
-fastboot flash --slot=all vbmeta lineage-20.0-xxxxxxxx-microG-kebab-vbmeta.img
+fastboot flash --slot=all dtbo lineage-21.0-xxxxxxxx-microG-kebab-dtbo.img
+fastboot flash --slot=all vbmeta lineage-21.0-xxxxxxxx-microG-kebab-vbmeta.img
 ```
