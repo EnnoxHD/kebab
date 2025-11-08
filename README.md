@@ -1,7 +1,7 @@
 # kebab
-OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
+OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/variant1/
 
-## Upgrade LineageOS for microG (21.0 to 22.1)
+## Upgrade LineageOS for microG
 
 ### Prerequisites
 
@@ -12,8 +12,8 @@ OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
 
 #### Resources
 1. [OxygenOS firmware image `KB2003_14.0.0.603(EX01): KB2003_11.H.26_3260_202409291635`](https://xdaforums.com/t/oneplus-8t-rom-ota-oxygen-os-repo-of-oxygen-os-builds.4193183/#post-83971385) (download with `curl -O <URL>`)
-1. [Additional firmware partition images `dtbo.img` and `vbmeta.img`](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions), [Download](https://download.lineage.microg.org/kebab/)
-1. [LineageOS for microG 22.1](https://download.lineage.microg.org/kebab/)
+1. [Additional firmware partition images `dtbo.img` and `vbmeta.img`](https://wiki.lineageos.org/devices/kebab/install/variant1/#flashing-additional-partitions), [Download](https://download.lineage.microg.org/kebab/)
+1. [LineageOS for microG](https://download.lineage.microg.org/kebab/)
     - Recovery image file
     - OS zip file
 1. Check all downloads with `sha256sum` or `md5sum` and compare them to the ones online
@@ -34,19 +34,19 @@ OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
     1. Enter fastboot: `adb reboot fastboot`
         1. Check connection: `fastboot devices`
     1. Update firmware
-        1. If the [latest required firmware](https://wiki.lineageos.org/devices/kebab/install/) is already installed this is optional only for vendor firmware. <br/>
+        1. If the [latest required firmware](https://wiki.lineageos.org/devices/kebab/install/variant1/) is already installed this is optional only for vendor firmware. <br/>
            **Do continue with the required additional partitions!**
         1. Update firmware, part 1: [Appendix A](#appendix-a)
         1. Update firmware, part 2: [Appendix B](#appendix-b) (WARNING: Use the correct files for your DDR type!)
         1. Update additional partitions: [Appendix C](#appendix-c) **(This is always required!)**
 1. Update Recovery
-    1. Flash LineageOS recovery image: `fastboot flash --slot=all recovery lineage-22.1-xxxxxxxx-microG-kebab-recovery.img`
+    1. Flash LineageOS recovery image: `fastboot flash --slot=all recovery lineage-xx.x-xxxxxxxx-microG-kebab-recovery.img`
     1. Reboot: `fastboot reboot bootloader`
 1. Update OS
     1. Start recovery
     1. Enable: `Advanced -> Enable ADB`
     1. Initiate sideloading: `Apply Update -> Apply from ADB`
-    1. Sideload: `adb sideload lineage-22.1-xxxxxxxx-microG-kebab.zip`
+    1. Sideload: `adb sideload lineage-xx.x-xxxxxxxx-microG-kebab.zip`
     1. Prompt: `To install additional packages... Do you want to reboot recovery now? -> NO`
     1. Start: `Reboot System now`
 1. First start of the new OS
@@ -68,7 +68,7 @@ OnePlus 8T (KB2003): https://wiki.lineageos.org/devices/kebab/
 ### Appendix
 
 #### Appendix A
-Source: [Update firmware on kebab: 7.](https://wiki.lineageos.org/devices/kebab/fw_update)
+Source: [Update firmware on kebab: 7.](https://wiki.lineageos.org/devices/kebab/fw_update/variant1/)
 
 ```
 fastboot flash --slot=all abl abl.img
@@ -94,7 +94,7 @@ fastboot flash --slot=all uefisecapp uefisecapp.img
 ```
 
 #### Appendix B
-Source: [Update firmware on kebab: 8.](https://wiki.lineageos.org/devices/kebab/fw_update)
+Source: [Update firmware on kebab: 8.](https://wiki.lineageos.org/devices/kebab/fw_update/variant1/)
 
 > WARNING: Use the correct files for your DDR type!
 
@@ -111,9 +111,9 @@ fastboot flash --slot=all xbl xbl_lp5.img
 ```
 
 #### Appendix C
-Source: [Install LineageOS on kebab: Flashing additional partitions](https://wiki.lineageos.org/devices/kebab/install#flashing-additional-partitions)
+Source: [Install LineageOS on kebab: Flashing additional partitions](https://wiki.lineageos.org/devices/kebab/install/variant1/#flashing-additional-partitions)
 
 ```
-fastboot flash --slot=all dtbo lineage-22.1-xxxxxxxx-microG-kebab-dtbo.img
-fastboot flash --slot=all vbmeta lineage-22.1-xxxxxxxx-microG-kebab-vbmeta.img
+fastboot flash --slot=all dtbo lineage-xx.x-xxxxxxxx-microG-kebab-dtbo.img
+fastboot flash --slot=all vbmeta lineage-xx.x-xxxxxxxx-microG-kebab-vbmeta.img
 ```
